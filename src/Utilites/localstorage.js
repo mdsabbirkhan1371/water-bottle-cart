@@ -26,7 +26,7 @@ const addToLocalStorage =(id)=>{
 }
 
 // remove cart 
-const removeCart =id=>{
+const removeFromLs =(id)=>{
     const cart = getStoredDataCart()
     const remaining= cart.filter(idx=>idx !==id)
     saveCartToLocalStorage(remaining)
@@ -34,4 +34,4 @@ const removeCart =id=>{
 
 // export for recall 
 
-export {addToLocalStorage,getStoredDataCart,removeCart}
+export {addToLocalStorage,getStoredDataCart,removeFromLs}

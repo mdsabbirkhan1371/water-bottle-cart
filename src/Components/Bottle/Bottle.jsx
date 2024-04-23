@@ -16,7 +16,7 @@ const Bottle = ({bottle,handleShopingCart}) => {
 Bottle.propTypes = {
     // You can declare that a prop is a specific JS primitive. By default, these
     // are all optional.
-    bottle: PropTypes.array.isRequired,
+    bottle: PropTypes.object.isRequired,
     handleShopingCart: PropTypes.func.isRequired
 }
 export default Bottle;

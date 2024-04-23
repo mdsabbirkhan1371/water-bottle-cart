@@ -1,7 +1,7 @@
 import './Cart.css'
 import PropTypes from 'prop-types'
 
-const Cart = ({cart}) => {
+const Cart = ({cart,handelRemoveFromCart}) => {
     
     return (
         <div className='cart-contianer'>
@@ -10,7 +10,7 @@ const Cart = ({cart}) => {
                 cart.map(bottle=><div key={bottle.id}>
                     
                     <img src={bottle.img}></img>
-                    <button>Remove</button>
+                    <button onClick={()=>handelRemoveFromCart(bottle.id)}>Remove</button>
                 </div>)
             }
         </div>
@@ -20,8 +20,8 @@ const Cart = ({cart}) => {
 Cart.propTypes = {
     // You can declare that a prop is a specific JS primitive. By default, these
     // are all optional.
-    cart: PropTypes.object.isRequired,
-    removeFromCart: PropTypes.func.isRequired
+    cart: PropTypes.array.isRequired,
+    
 }
 
 export default Cart;
