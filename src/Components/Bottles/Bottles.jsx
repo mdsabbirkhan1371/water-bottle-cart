@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './Bottles.css'
 import Bottle from "../Bottle/Bottle";
-import { addToLocalStorage, getStoredDataCart } from "../../Utilites/localstorage";
+import { addToLocalStorage, getStoredDataCart, removeCart } from "../../Utilites/localstorage";
 import Cart from "../Cart/Cart";
 
 const Bottles = () => {
@@ -41,6 +41,9 @@ const Bottles = () => {
         // set in local storage 
         addToLocalStorage(bottle.id)
     }
+
+    
+
     return (
         <div>
             <h3>Bottle :{bottles.length}</h3>

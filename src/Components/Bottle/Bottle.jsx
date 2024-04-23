@@ -1,5 +1,5 @@
 import './Bottle.css'
-
+import PropTypes from 'prop-types'
 const Bottle = ({bottle,handleShopingCart}) => {
     const {name,price,img}=bottle;
     return (
@@ -13,4 +13,10 @@ const Bottle = ({bottle,handleShopingCart}) => {
     );
 };
 
+Bottle.propTypes = {
+    // You can declare that a prop is a specific JS primitive. By default, these
+    // are all optional.
+    bottle: PropTypes.array.isRequired,
+    handleShopingCart: PropTypes.func.isRequired
+}
 export default Bottle;
